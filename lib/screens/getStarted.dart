@@ -1,6 +1,7 @@
 import '../widgets/weatheranimation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../widgets/cusBtn.dart';
 
 class GetStartedPage extends StatelessWidget {
   @override
@@ -40,6 +41,11 @@ class GetStartedPage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            CusButton(
+                onTapFn: () {
+                  Navigator.pushNamed(context, '/homepage');
+                },
+                text: 'Get Started')
           ],
         ),
       )),

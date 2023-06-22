@@ -21,7 +21,7 @@ class CusButton extends StatelessWidget {
           text,
           style: const TextStyle(
             fontSize: 18,
-            //color: Colors.white,
+            color: Colors.white,
           ),
         ),
       ),
