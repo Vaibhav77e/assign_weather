@@ -29,6 +29,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-            <uses-permissionAndroid:name="Android.permission.INTERNET"/>
+           
     </application>
+     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
