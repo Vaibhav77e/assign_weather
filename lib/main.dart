@@ -1,8 +1,9 @@
+import './screens/getStarted.dart';
 import 'package:assign_weather_app/testpage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './services/request.dart';
-import 'homepage.dart';
+import 'screens/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,11 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         //home: TestPage(),
-        home: HomePage(),
+        home: GetStartedPage(),
+
+        routes: {
+          HomePage.routeName: (context) => HomePage(),
+        },
       ),
     );
   }

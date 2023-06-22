@@ -1,10 +1,8 @@
-import './widgets/weatheranimation.dart';
+import '../widgets/weatheranimation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
+class GetStartedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +36,10 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
           ],
         ),
       )),
