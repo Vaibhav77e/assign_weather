@@ -1,0 +1,6 @@
+To run flutter app goto root directory in the terimal ie your application name the enter cmd flutter run
+In IDE - I use Vs code goto main.dart then hit run
+api - I have used free weather api : https://api.weatherapi.com/v1/current.json?key=9f960fea163b489a8ca73655232206&q=mumbai
+
+
+key is private key which we have to generate ,
