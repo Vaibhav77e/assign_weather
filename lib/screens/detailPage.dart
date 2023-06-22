@@ -33,7 +33,8 @@ class DetailPage extends StatelessWidget {
                   try {
                     Provider.of<Request>(context, listen: false)
                         .searchCity(searchController.text);
-                    Navigator.pushNamed(context, '/homepage');
+                    //Navigator.pushNamed(context, '/homepage');
+                    Navigator.pushNamed(context, '/weather-animation');
                   } catch (e) {
                     print(e.toString());
                   }

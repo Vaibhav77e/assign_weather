@@ -1,6 +1,5 @@
-import 'package:assign_weather_app/dummyPage.dart';
 import 'package:flutter/services.dart';
-
+import './widgets/animations/weatherLoading.dart';
 import './screens/getStarted.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -28,12 +27,11 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        //home: Dummy(),
         home: GetStartedPage(),
-
         routes: {
           HomePage.routeName: (context) => HomePage(),
           DetailPage.routeNamed: (context) => DetailPage(),
+          WeathearLoading.routeName: (context) => WeathearLoading()
         },
       ),
     );
