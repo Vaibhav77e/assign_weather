@@ -3,16 +3,12 @@ import '../widgets/cusrow.dart';
 import '../widgets/custtext.dart';
 import '../services/request.dart';
 import 'package:provider/provider.dart';
-import '../widgets/showBox.dart';
 
 class TestPage extends StatelessWidget {
-  static const routeName = '/homepage';
-
   @override
   Widget build(BuildContext context) {
     final newData = Provider.of<Request>(context);
     return Scaffold(
-        appBar: AppBar(),
         backgroundColor: Color(050505),
         body: SingleChildScrollView(
           child: Container(
@@ -69,17 +65,20 @@ class TestPage extends StatelessWidget {
                       child: SizedBox(
                         height: MediaQuery.sizeOf(context).height * 0.15,
                         width: MediaQuery.sizeOf(context).height * 0.15,
-                        child: Image.network(
-                          'https:${newData.imageUrl}',
-                          fit: BoxFit.fill,
+                        child: Padding(
+                          padding: const EdgeInsets.all(80.0),
+                          child: Image.network(
+                            'https:${newData.imageUrl}',
+                            fit: BoxFit.fill,
+                          ),
                         ),
-                        // child: Image.network(
-                        //   'https://cdn.weatherapi.com/weather/64x64/night/143.png',
-                        // ),
                       )),
                   buildText(
-                      text: 'Condition', color: Colors.white, fontSize: 40),
-                  buildText(text: '13°', color: Colors.white, fontSize: 45),
+                      text: newData.cond, color: Colors.white, fontSize: 40),
+                  buildText(
+                      text: '${newData.temp}°',
+                      color: Colors.white,
+                      fontSize: 45),
                   const SizedBox(
                     height: 20,
                   ),

@@ -1,6 +1,9 @@
+import 'package:provider/provider.dart';
+
+import '../services/request.dart';
 import '../widgets/weatheranimation.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import '../widgets/cusBtn.dart';
 import '../widgets/custtext.dart';
 
@@ -33,6 +36,7 @@ class GetStartedPage extends StatelessWidget {
             ),
             CusButton(
                 onTapFn: () {
+                  Provider.of<Request>(context, listen: false).getData();
                   Navigator.pushNamed(context, '/homepage');
                 },
                 text: 'Get Started')

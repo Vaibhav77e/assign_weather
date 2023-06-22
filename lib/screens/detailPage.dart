@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import '../widgets/searchBar.dart';
+import '../services/request.dart';
+import 'package:provider/provider.dart';
 
 class DetailPage extends StatelessWidget {
+  TextEditingController searchController = TextEditingController();
   static const routeNamed = '/search';
-  const DetailPage({super.key});
+  DetailPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +15,7 @@ class DetailPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Color(050505),
           leading: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.white,
             ),
@@ -25,7 +28,16 @@ class DetailPage extends StatelessWidget {
           child: Column(
             children: [
               CustomSearch(
-                onPressed: () {},
+                controller: searchController,
+                onPressed: () async {
+                  try {
+                    Provider.of<Request>(context, listen: false)
+                        .searchCity(searchController.text);
+                    Navigator.pushNamed(context, '/homepage');
+                  } catch (e) {
+                    print(e.toString());
+                  }
+                },
               ),
             ],
           ),
