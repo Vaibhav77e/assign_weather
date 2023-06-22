@@ -24,5 +24,6 @@ to display:
 current temp-r
 weather cond-r
 condition-r big screen
+
 wind_dir
 humidity-r

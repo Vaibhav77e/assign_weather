@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './services/request.dart';
 import 'screens/homepage.dart';
+import './screens/detailPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
 
         routes: {
           HomePage.routeName: (context) => HomePage(),
+          DetailPage.routeNamed: (context) => DetailPage(),
         },
       ),
     );

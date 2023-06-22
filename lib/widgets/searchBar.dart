@@ -11,10 +11,10 @@ class CustomSearch extends StatelessWidget {
       // height: MediaQuery.of(context).size.height * 0.2,
       width: double.infinity,
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(12)),
+          color: Colors.grey, borderRadius: BorderRadius.circular(12)),
       child: TextField(
         decoration: InputDecoration(
-            prefixIcon: IconButton(
+            suffixIcon: IconButton(
               icon: const Icon(
                 Icons.search,
                 color: Colors.black,
@@ -23,6 +23,7 @@ class CustomSearch extends StatelessWidget {
               onPressed: onPressed,
             ),
             hintText: "Search",
+            hintStyle: TextStyle(fontSize: 20),
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(12))),
       ),

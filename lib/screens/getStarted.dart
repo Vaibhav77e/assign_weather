@@ -2,6 +2,7 @@ import '../widgets/weatheranimation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../widgets/cusBtn.dart';
+import '../widgets/custtext.dart';
 
 class GetStartedPage extends StatelessWidget {
   @override
@@ -19,22 +20,11 @@ class GetStartedPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(
-                    'Weather',
-                    //style: TextStyle(fontSize: 26, color: Colors.yellow[600],),
-                    style: GoogleFonts.poppins(
-                        fontSize: 26,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  Text(
-                    'News and Feed',
-                    //style: TextStyle(fontSize: 26, color: Colors.yellow[600],),
-                    style: GoogleFonts.poppins(
-                        fontSize: 26,
-                        color: Colors.yellow[600],
-                        fontWeight: FontWeight.w600),
-                  ),
+                  buildText(text: 'Weather', color: Colors.white, fontSize: 26),
+                  buildText(
+                      text: 'News and Feed',
+                      color: Colors.yellow[600],
+                      fontSize: 26),
                 ],
               ),
             ),
